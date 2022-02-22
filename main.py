@@ -4,8 +4,7 @@ import json
 API_KEY = "77898adead85b505390dd8deaabba714"
 url = (f"https://api.themoviedb.org/3/discover/movie?api_key={API_KEY}&page=1&language=en-US&include_video=true")
 response = requests.get(url).json()
-#with open('spiderman.json','w') as file:
-#    file.write(json.dumps(response))
+
 for j in range(1,10):
     url = (f"https://api.themoviedb.org/3/discover/movie?api_key={API_KEY}&page={j}&language=en-US&include_video=true")
     response = requests.get(url).json()
